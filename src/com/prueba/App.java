@@ -22,13 +22,22 @@ public class App {
 		
 	}
 	
+	
+	private void m2IsCapicua(int number) {
+		
+		String numberText = String.valueOf(number);
+		String reverseNumber = new StringBuilder(numberText).reverse().toString(); 
+		
+	}
+	
+	
 	public static void main (String[] args) {
 		
 		App app = new App();
 		app.m1InvertirString("Burofy Abogados Corp");
 		//String vida = "hola";
 		//System.out.print();
-		
+		app.m2IsCapicua(898);
 		
 	}
 
