@@ -5,7 +5,7 @@ public class App {
 	//invertir una cadena
 	private void  m1InvertirString(String text) {
 		 
-		String[] array = text.split("");
+		/*String[] array = text.split("");
 		StringBuilder newText = new StringBuilder();
 		
 		
@@ -13,8 +13,13 @@ public class App {
 		
 			newText.append(array[i - 1]);
 			
-	} System.out.println(newText);
+	} System.out.println(newText);*/
+		
+		//Desde Java 6  método reverse
+		String newText = new StringBuilder(text).reverse().toString();	
 	
+		 System.out.println(newText);
+		
 	}
 	
 	public static void main (String[] args) {
