@@ -1,5 +1,7 @@
 package com.prueba;
 
+import java.time.LocalDate;
+
 public class App {
 	
 	//invertir una cadena
@@ -89,12 +91,23 @@ public class App {
 	public void m5MultipleDf2(int number) {
 		
 		if(number % 2 == 0) {
-			System.out.println("Es multiple de si mismo: " + number);
+			System.out.println("Es multiplo: " + number);
 		} else {
-			System.out.println("Not multiple de si mismo: " + number);
+			System.out.println("Not is multiplo  " + number);
 		}
 		
 	}
+	
+	
+	//ver si es año BISIESTO
+	public void m5IsLeapYeard(int year) {
+		
+		Boolean isLeapYear =  LocalDate.of(year, 1, 1).isLeapYear();
+		
+		System.out.println("Este es al bisiesto: " + isLeapYear);
+		 
+	}
+	
 	
 	public static void main (String[] args) {
 		
@@ -105,8 +118,8 @@ public class App {
 		//app.m2IsCapicua(999919999);
 		//app.m3CountCharacterTimes("OXIMORON");
 		//app.m4RepeatCharacter("OXIMORON");
-		app.m5MultipleDf2(2);
-		
+		//app.m5MultipleDf2(11);
+		app.m5IsLeapYeard(11);
 	}
 
 	//RECURSIÓN RE-UTILIZAR EL CODE
