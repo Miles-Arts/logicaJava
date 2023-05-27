@@ -48,19 +48,27 @@ public class App {
 		
 		for(i = 0; i < length; i++) {
 			
-			counter[text.charAt(i)] = counter[text.charAt(i)] + 1;
-		}
-		
+			//counter[text.charAt(i)] = counter[text.charAt(i)] + 1;
+			counter[text.charAt(i)] ++;
+			
+		} for(i = 0; i < 256; i++) {
+			
+			if (counter[i] != 0 ) {
+				
+				System.out.println((char)i +  ": " + counter[i]);
+				
+			}
+		}	
 	}
 	
 	
 	public static void main (String[] args) {
 		
 		App app = new App();
-		app.m1InvertirString("Burofy Abogados Corp");
+		//app.m1InvertirString("Burofy Abogados Corp");
 		//String vida = "hola";
 		//System.out.print();
-		app.m2IsCapicua(999919999);
+		//app.m2IsCapicua(999919999);
 		app.m3CountCharacterTimes("OXIMORON");
 		
 	}
