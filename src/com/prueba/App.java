@@ -62,6 +62,40 @@ public class App {
 	}
 	
 	
+	//Mostrar los repetidos
+	private void m4RepeatCharacter(String text) {
+		
+		//int, Inicializado con 256
+		int i, length, counter[] = new int[256];
+		
+		length = text.length();
+		
+		for(i = 0; i < length; i++) {
+			
+			//counter[text.charAt(i)] = counter[text.charAt(i)] + 1;
+			counter[text.charAt(i)] ++;
+			
+		} for(i = 0; i < 256; i++) {
+			
+			if (counter[i] > 1 ) {
+				
+				System.out.println((char)i +  ": " + counter[i]);
+				
+			}
+		}	
+	}
+	
+	//Saber sí un numero es multiplo de sí mismo
+	public void m5MultipleDf2(int number) {
+		
+		if(number % 2 == 0) {
+			System.out.println("Es multiple de si mismo: " + number);
+		} else {
+			System.out.println("Not multiple de si mismo: " + number);
+		}
+		
+	}
+	
 	public static void main (String[] args) {
 		
 		App app = new App();
@@ -69,8 +103,12 @@ public class App {
 		//String vida = "hola";
 		//System.out.print();
 		//app.m2IsCapicua(999919999);
-		app.m3CountCharacterTimes("OXIMORON");
+		//app.m3CountCharacterTimes("OXIMORON");
+		//app.m4RepeatCharacter("OXIMORON");
+		app.m5MultipleDf2(2);
 		
 	}
 
+	//RECURSIÓN RE-UTILIZAR EL CODE
+	
 }
