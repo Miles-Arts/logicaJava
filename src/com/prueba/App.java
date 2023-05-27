@@ -133,11 +133,51 @@ public class App {
 	}
 	
 	//Revisar si hay vocales en un texto
-	public void m9CheckIfVowelIsPresent() {
+	/**
+	 * @param text
+	 */
+	public void m9CheckIfVowelIfPresent(String text) {
 		
 		
-	}
-	
+		/*
+		 * String[] array = text.split(""); Boolean isPresente = false;
+		 * 
+		 * for(String s : array) { if(s.equals("a") || s.equals("e") || s.equals("i") ||
+		 * s.equals("o") || s.equals("u")) { isPresente = true; break; } }
+		 * System.out.println("have Vowel = " + isPresente);
+		 */
+		
+		/*
+		 * Boolean result = text.matches(".*[aeiou].*"); System.out.println(result);
+		 * 
+		 * Arrays.asList(text.split("")).stream().map( s -> {
+		 * 
+		 * boolean rpta = false;
+		 * 
+		 * if(s.equals("a") || s.equals("e") || s.equals("i") || s.equals("o") ||
+		 * s.equals("u")) { rpta = true; } return rpta; });
+		 */
+		
+		 boolean  rpta = Arrays.asList(text.split("")).stream().anyMatch( s -> s.equals("a") || s.equals("e") || s.equals("i") || s.equals("o") ||
+				  s.equals("u")) ;
+		 System.out.println(rpta);
+  }
+
+	//
+	public boolean m10Palindromo(String text) {
+		
+		boolean resultado  = true;
+		int length = text.length();
+		
+		for(int i = 0; i < length/2; i++ ) {
+			
+			if(text.charAt(i) != text.charAt(length - i - 1)) {
+			resultado = false;
+			break;
+		}
+	} 
+		return resultado;
+}
 	
 	public static void main (String[] args) {
 		
@@ -152,7 +192,8 @@ public class App {
 		//app.m6IsLeapYeard(2018);
 		//app.m7RandomOrderString("Aprendo JAVA");
 		//app.m8GetOnlyNotDuplicateList(Arrays.asList(1,1,13,4,1,87,7,7,7,99));
-		app.m9CheckIfVowelIsPresent();
+		//app.m9CheckIfVowelIfPresent("Hola gente");
+		System.out.println(app.m10Palindromo("oto oto"));
 		
 	}
 
