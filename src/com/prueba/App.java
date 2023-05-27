@@ -132,6 +132,12 @@ public class App {
 		
 	}
 	
+	//Revisar si hay vocales en un texto
+	public void m9CheckIfVowelIsPresent() {
+		
+		
+	}
+	
 	
 	public static void main (String[] args) {
 		
@@ -145,8 +151,8 @@ public class App {
 		//app.m5MultipleDf2(11);
 		//app.m6IsLeapYeard(2018);
 		//app.m7RandomOrderString("Aprendo JAVA");
-		app.m8GetOnlyNotDuplicateList(Arrays.asList(1,1,13,4,1,87,7,7,7,99));
-		
+		//app.m8GetOnlyNotDuplicateList(Arrays.asList(1,1,13,4,1,87,7,7,7,99));
+		app.m9CheckIfVowelIsPresent();
 		
 	}
 
