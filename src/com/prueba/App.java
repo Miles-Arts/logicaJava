@@ -1,6 +1,10 @@
 package com.prueba;
 
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class App {
 	
@@ -100,12 +104,22 @@ public class App {
 	
 	
 	//ver si es año BISIESTO
-	public void m5IsLeapYeard(int year) {
+	public void m6IsLeapYeard(int year) {
 		
 		Boolean isLeapYear =  LocalDate.of(year, 1, 1).isLeapYear();
 		
-		System.out.println("Este es al bisiesto: " + isLeapYear);
+		System.out.println("Este año es bisiesto: " + isLeapYear);
 		 
+	}
+	
+	
+	public void m7RandomOrderString(String text) {
+	
+		String[] array = text.split("");
+		List<String> list = Arrays.asList(array);
+		Collections.shuffle(list);
+		list.forEach(System.out::print);
+		
 	}
 	
 	
@@ -119,7 +133,8 @@ public class App {
 		//app.m3CountCharacterTimes("OXIMORON");
 		//app.m4RepeatCharacter("OXIMORON");
 		//app.m5MultipleDf2(11);
-		app.m5IsLeapYeard(11);
+		//app.m6IsLeapYeard(2018);
+		app.m7RandomOrderString("Aprendo JAVA");
 	}
 
 	//RECURSIÓN RE-UTILIZAR EL CODE
