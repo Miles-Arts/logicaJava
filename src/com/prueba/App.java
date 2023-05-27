@@ -4,7 +4,9 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class App {
 	
@@ -122,6 +124,14 @@ public class App {
 		
 	}
 	
+	//Set no acepta valores duplicados
+	public void m8GetOnlyNotDuplicateList(List<Integer> list) {
+		
+		Set<Integer> set = new HashSet<>(list);
+		set.forEach(System.out::println);
+		
+	}
+	
 	
 	public static void main (String[] args) {
 		
@@ -134,7 +144,10 @@ public class App {
 		//app.m4RepeatCharacter("OXIMORON");
 		//app.m5MultipleDf2(11);
 		//app.m6IsLeapYeard(2018);
-		app.m7RandomOrderString("Aprendo JAVA");
+		//app.m7RandomOrderString("Aprendo JAVA");
+		app.m8GetOnlyNotDuplicateList(Arrays.asList(1,1,13,4,1,87,7,7,7,99));
+		
+		
 	}
 
 	//RECURSIÓN RE-UTILIZAR EL CODE
