@@ -6,16 +6,19 @@ public class App1 {
 	
 		private void m1InvertirString(String text) {
 		
-			String[] array =  text.split("");
-			StringBuilder newText = new StringBuilder();
-		
-			for (int i = array.length; i > 0; i --) {
-				
-				newText.append(array[i - 1]);
-				
-			}
+//			String[] array =  text.split("");
+//			StringBuilder newText = new StringBuilder();
+//		
+//			for (int i = array.length; i > 0; i --) {
+//				
+//				newText.append(array[i - 1]);
+//				
+//			}
+//			
+//			System.out.println(newText);
 			
-			System.out.println(newText);
+			String newtext = new StringBuilder(text).reverse().toString();
+			System.out.println(newtext);
 			
 		}
 	
